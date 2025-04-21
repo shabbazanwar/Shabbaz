@@ -32,8 +32,17 @@ const Project = () => {
             <ProjectCard
               title="Multi-Vendor E-commerce Platform"
               description="A multi-vendor e-commerce platform built using React, Node.js, and MongoDB."
-              image="https://res.cloudinary.com/djbtdlzrj/image/upload/v1738102888/Screenshot_2025-01-28_232113_o3john.png" // Replace with actual image URL
-              link="https://essence-of-style.onrender.com/"
+              image="https://res.cloudinary.com/duw8lbca7/image/upload/v1745235132/Screenshot_2025-04-21_052910_jbnkf8.png" 
+              link="https://shopspire.onrender.com/"
+            />
+          </Col>
+
+          <Col lg={4} md={6} xs={12} className="mb-4">
+            <ProjectCard
+              title="Finance Tracker"
+              description="A Finance tracker using React, Node.js, and MongoDB."
+              image="https://res.cloudinary.com/duw8lbca7/image/upload/v1745235603/Screenshot_2025-04-21_053642_rdtqxb.png" 
+              link="https://finsync-p5sr.onrender.com"
             />
           </Col>
         </Row>
