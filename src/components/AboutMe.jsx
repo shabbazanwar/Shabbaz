@@ -6,10 +6,14 @@ const AboutMe = () => {
   return (
     <section className="d-flex flex-column justify-content-center align-items-center text-center min-vh-100 bg-light px-3">
       <img
-        src="/profile.jpg"
-        alt="Abdulazeem Salau"
-        className="profile-pic mb-3"
-      />
+  src="https://res.cloudinary.com/duw8lbca7/image/upload/v1745314841/IMG-20250421-WA0024_fart7l.jpg"
+  alt="Abdulazeem Salau"
+  className="mb-3 rounded shadow"
+  style={{ width: '200px', height: '200px', objectFit: 'cover' }}
+/>
+
+
+
       <h1 className="fw-bold">Abdulazeem Salau</h1>
       <p className="text-muted fs-5">Full-Stack Developer</p>
       
@@ -30,7 +34,7 @@ const AboutMe = () => {
       </div>
 
       <div className="mt-3">
-        <a href="#projects" className="btn btn-primary me-2">
+        <a href="#skills" className="btn btn-primary me-2">
           View My Work
         </a>
         <a href="#contact" className="btn btn-outline-primary">
