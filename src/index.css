@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --brand-primary: #4f46e5;
+  --brand-primary-dark: #3730a3;
+  --brand-dark: #111827;
+  --brand-muted: #6b7280;
+  --brand-bg-light: #f8f9fc;
+  --navbar-height: 72px;
+  --transition-base: 0.25s ease;
+
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: var(--brand-dark);
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", "Inter", system-ui, sans-serif;
+}
+
+/* Responsive heading scale so titles don't overflow on small screens */
+h1 {
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--brand-primary-dark);
+  border-color: var(--brand-primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+/* Shared hover treatment for social icons across Footer/AboutMe/Contact */
+.hover-icon,
+.footer-icon {
+  transition: transform var(--transition-base), color var(--transition-base);
+  display: inline-flex;
+}
+
+.hover-icon:hover,
+.footer-icon:hover {
+  transform: translateY(-3px);
+  color: var(--brand-primary) !important;
+}
+
+/* Section spacing so content clears the fixed navbar and stays consistent */
+.section {
+  scroll-margin-top: var(--navbar-height);
+}
+
+.site-footer {
+  width: 100%;
+}
+
+.project-card {
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.15) !important;
+}
+
+.skill-card {
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  :root {
+    --navbar-height: 64px;
+  }
+}

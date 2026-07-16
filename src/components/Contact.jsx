@@ -29,7 +29,9 @@ const Contact = () => {
     setLoading(true);
     setSuccess(null);
 
-    fetch(`https://izuemailserver.onrender.com/api/send-email`, {
+    const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
+    fetch(`${apiUrl}/api/send-email`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

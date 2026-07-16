@@ -31,20 +31,21 @@ const Portfolio = () => {
         contactRef={contactRef}
       />
 
-      <div ref={aboutRef}>
-        <AboutMe 
+      <div ref={aboutRef} className="section" style={{ paddingTop: "var(--navbar-height)" }}>
+        <AboutMe
         scrollToSection={scrollToSection} // Pass scroll function
         projectsRef={projectsRef} // Pass projectsRef
         contactRef={contactRef} // Pass contactRef
         />
+        <Hero />
       </div>
-      <div ref={projectsRef}>
+      <div ref={projectsRef} className="section">
         <Project />
       </div>
-      <div ref={skillsRef}>
+      <div ref={skillsRef} className="section">
         <Skills />
       </div>
-      <div ref={contactRef}>
+      <div ref={contactRef} className="section">
         <Contact />
       </div>
     </div>

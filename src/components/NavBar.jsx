@@ -1,77 +1,68 @@
-import React, { useState } from 'react';
-import { Link } from 'react-scroll';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React, { useEffect, useState } from "react";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
-const NavigationBar = () => {
+const NavigationBar = ({
+  scrollToSection,
+  aboutRef,
+  projectsRef,
+  skillsRef,
+  contactRef,
+}) => {
   const [expanded, setExpanded] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const handleToggle = () => setExpanded(!expanded);
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navItems = [
+    { label: "About Me", ref: aboutRef },
+    { label: "Projects", ref: projectsRef },
+    { label: "Skills", ref: skillsRef },
+    { label: "Contact", ref: contactRef },
+  ];
+
+  const handleNavClick = (ref) => {
+    scrollToSection(ref);
+    setExpanded(false);
+  };
 
   return (
     <Navbar
       expanded={expanded}
       bg="light"
       expand="lg"
-      className="mb-4 fixed-top shadow-sm"
+      fixed="top"
+      className={`shadow-sm ${scrolled ? "navbar-scrolled" : ""}`}
+      style={{ minHeight: "var(--navbar-height)" }}
     >
       <Container>
-        <Navbar.Brand href="#home" className="fw-bold">
+        <Navbar.Brand
+          role="button"
+          onClick={() => handleNavClick(aboutRef)}
+          className="fw-bold"
+          style={{ color: "var(--brand-primary)" }}
+        >
           Shabbaz
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="navbar-nav"
-          onClick={handleToggle}
+          onClick={() => setExpanded((prev) => !prev)}
         />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Item>
-              <Link
-                to="home"
-                smooth={true}
-                duration={500}
-                offset={-70}
-                className="nav-link"
-                onClick={handleToggle}
+            {navItems.map(({ label, ref }) => (
+              <Nav.Link
+                key={label}
+                as="button"
+                className="nav-link border-0 bg-transparent"
+                onClick={() => handleNavClick(ref)}
               >
-                About Me
-              </Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Link
-                to="projects"
-                smooth={true}
-                duration={500}
-                offset={-70}
-                className="nav-link"
-                onClick={handleToggle}
-              >
-                Projects
-              </Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Link
-                to="about"
-                smooth={true}
-                duration={500}
-                offset={-70}
-                className="nav-link"
-                onClick={handleToggle}
-              >
-                Skills
-              </Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Link
-                to="contact"
-                smooth={true}
-                duration={500}
-                offset={-70}
-                className="nav-link"
-                onClick={handleToggle}
-              >
-                Contact
-              </Link>
-            </Nav.Item>
+                {label}
+              </Nav.Link>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Container>

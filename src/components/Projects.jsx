@@ -21,6 +21,15 @@ const Project = () => {
           {/* Each project takes 4 columns on large screens, 6 on medium, 12 on small */}
           <Col lg={4} md={6} xs={12} className="mb-4">
             <ProjectCard
+              title="Yew! Couture"
+              description="A Nigerian fashion brand e-commerce site showcasing and selling ready-to-wear apparel."
+              image="/projects/yew-couture.png"
+              link="https://yewcouture.org"
+            />
+          </Col>
+
+          <Col lg={4} md={6} xs={12} className="mb-4">
+            <ProjectCard
               title="School Management System"
               description="A modern School Management System built using React, Node.js, and MongoDB."
               image="https://res.cloudinary.com/djbtdlzrj/image/upload/v1738102417/Screenshot_2025-01-28_231209_wmkvwt.png" // Replace with actual image URL
@@ -32,7 +41,7 @@ const Project = () => {
             <ProjectCard
               title="Multi-Vendor E-commerce Platform"
               description="A multi-vendor e-commerce platform built using React, Node.js, and MongoDB."
-              image="https://res.cloudinary.com/duw8lbca7/image/upload/v1745235132/Screenshot_2025-04-21_052910_jbnkf8.png" 
+              image="https://res.cloudinary.com/duw8lbca7/image/upload/v1745235132/Screenshot_2025-04-21_052910_jbnkf8.png"
               link="https://shopspire.onrender.com/"
             />
           </Col>
@@ -41,7 +50,7 @@ const Project = () => {
             <ProjectCard
               title="Finance Tracker"
               description="A Finance tracker using React, Node.js, and MongoDB."
-              image="https://res.cloudinary.com/duw8lbca7/image/upload/v1745235603/Screenshot_2025-04-21_053642_rdtqxb.png" 
+              image="https://res.cloudinary.com/duw8lbca7/image/upload/v1745235603/Screenshot_2025-04-21_053642_rdtqxb.png"
               link="https://finsync-p5sr.onrender.com"
             />
           </Col>

@@ -57,23 +57,9 @@ const Skills = () => {
                     placement="top"
                     overlay={<Tooltip>{skill.name}</Tooltip>}
                   >
-                    <Card
-                      className="text-center"
-                      style={{
-                        padding: "2rem 1rem",
-                        borderRadius: "15px",
-                        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                        transition: "transform 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = "scale(1.05)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = "scale(1)";
-                      }}
-                    >
-                      <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>{skill.icon}</div>
-                      <h6 className="fw-bold text-dark">{skill.name}</h6>
+                    <Card className="skill-card text-center h-100">
+                      <div className="skill-icon">{skill.icon}</div>
+                      <h6 className="fw-bold text-dark mb-0">{skill.name}</h6>
                     </Card>
                   </OverlayTrigger>
                 </Col>

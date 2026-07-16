@@ -1,23 +1,24 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-const AboutMe = () => {
+const AboutMe = ({ scrollToSection, projectsRef, contactRef }) => {
   return (
-    <section className="d-flex flex-column justify-content-center align-items-center text-center min-vh-100 bg-light px-3">
+    <section className="d-flex flex-column justify-content-center align-items-center text-center bg-light px-3 py-5">
       <img
-  src="https://res.cloudinary.com/duw8lbca7/image/upload/v1745314841/IMG-20250421-WA0024_fart7l.jpg"
-  alt="Abdulazeem Salau"
-  className="mb-3 rounded shadow"
-  style={{ width: '200px', height: '200px', objectFit: 'cover' }}
-/>
-
-
+        src="https://res.cloudinary.com/duw8lbca7/image/upload/v1745314841/IMG-20250421-WA0024_fart7l.jpg"
+        alt="Abdulazeem Salau"
+        className="mb-3 rounded-circle shadow"
+        style={{
+          width: 'clamp(140px, 25vw, 200px)',
+          height: 'clamp(140px, 25vw, 200px)',
+          objectFit: 'cover',
+        }}
+      />
 
       <h1 className="fw-bold">Abdulazeem Salau</h1>
       <p className="text-muted fs-5">Full-Stack Developer</p>
-      
-      <p className="text-center mb-4 px-3">
+
+      <p className="text-center mb-4 px-2 px-md-5" style={{ maxWidth: '700px' }}>
         I'm Abdulazeem Salau, a Full-Stack Developer passionate about creating web applications. I specialize in both front-end and back-end development using technologies like React, Node.js, and MongoDB. I enjoy solving problems, building user-friendly interfaces, and writing clean, scalable code. I'm always eager to learn new technologies and work on projects that make an impact.
       </p>
 
@@ -33,13 +34,21 @@ const AboutMe = () => {
         </a>
       </div>
 
-      <div className="mt-3">
-        <a href="#skills" className="btn btn-primary me-2">
+      <div className="mt-3 d-flex flex-column flex-sm-row gap-2 w-100 justify-content-center px-4" style={{ maxWidth: '360px' }}>
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={() => scrollToSection?.(projectsRef)}
+        >
           View My Work
-        </a>
-        <a href="#contact" className="btn btn-outline-primary">
+        </button>
+        <button
+          type="button"
+          className="btn btn-outline-primary"
+          onClick={() => scrollToSection?.(contactRef)}
+        >
           Get In Touch
-        </a>
+        </button>
       </div>
     </section>
   );
