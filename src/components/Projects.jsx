@@ -31,7 +31,7 @@ const Project = () => {
           <Col lg={4} md={6} xs={12} className="mb-4">
             <ProjectCard
               title="School Management System"
-              description="A modern School Management System built using React, Node.js, and MongoDB."
+              description="A school management system for handling student records, classes, and administration."
               image="https://res.cloudinary.com/djbtdlzrj/image/upload/v1738102417/Screenshot_2025-01-28_231209_wmkvwt.png" // Replace with actual image URL
               link="https://chizzy-kids-school.onrender.com/"
             />
@@ -39,8 +39,8 @@ const Project = () => {
 
           <Col lg={4} md={6} xs={12} className="mb-4">
             <ProjectCard
-              title="Multi-Vendor E-commerce Platform"
-              description="A multi-vendor e-commerce platform built using React, Node.js, and MongoDB."
+              title="ShopSpire"
+              description="A multi-vendor e-commerce platform where vendors manage their own stores and customers shop across all of them in one place."
               image="https://res.cloudinary.com/duw8lbca7/image/upload/v1745235132/Screenshot_2025-04-21_052910_jbnkf8.png"
               link="https://shopspire.onrender.com/"
             />
@@ -48,10 +48,19 @@ const Project = () => {
 
           <Col lg={4} md={6} xs={12} className="mb-4">
             <ProjectCard
-              title="Finance Tracker"
-              description="A Finance tracker using React, Node.js, and MongoDB."
+              title="FinSync"
+              description="A personal finance tracker for logging income and expenses and keeping an eye on your budget."
               image="https://res.cloudinary.com/duw8lbca7/image/upload/v1745235603/Screenshot_2025-04-21_053642_rdtqxb.png"
               link="https://finsync-p5sr.onrender.com"
+            />
+          </Col>
+
+          <Col lg={4} md={6} xs={12} className="mb-4">
+            <ProjectCard
+              title="Jadoo | Travel & Tourism"
+              description="A travel and tourism platform for discovering destinations and planning trips."
+              image="/projects/jadoo.png"
+              link="https://jadoo-yfr7.onrender.com"
             />
           </Col>
         </Row>

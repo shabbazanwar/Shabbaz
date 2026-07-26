@@ -5,7 +5,11 @@ import {
   FaNode, FaDatabase, FaGitAlt, FaEdge, FaTerminal
 } from "react-icons/fa";
 import {
-    SiTailwindcss,        
+    SiTailwindcss,
+    SiNextdotjs,
+    SiPostgresql,
+    SiPrisma,
+    SiSupabase,
     SiRender,
     SiOpenai
   } from "react-icons/si";
@@ -21,6 +25,7 @@ const Skills = () => {
         { name: "React", icon: <FaReact color="#61dafb" /> },
         { name: "Bootstrap", icon: <FaBootstrap color="#7952b3" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss color="#38bdf8" /> },
+        { name: "Next.js", icon: <SiNextdotjs color="#000000" /> },
       ],
     },
     {
@@ -28,6 +33,9 @@ const Skills = () => {
       items: [
         { name: "Node.js", icon: <FaNode color="#3c873a" /> },
         { name: "MongoDB", icon: <FaDatabase color="#4db33d" /> },
+        { name: "PostgreSQL", icon: <SiPostgresql color="#336791" /> },
+        { name: "Prisma", icon: <SiPrisma color="#0c344b" /> },
+        { name: "Supabase", icon: <SiSupabase color="#3ecf8e" /> },
         { name: "HTTPie", icon: <FaTerminal color="#6c757d" /> },
       ],
     },
