@@ -1,6 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaSnapchatGhost,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -37,6 +44,24 @@ const Footer = () => {
                 aria-label="Twitter Profile"
               >
                 <FaTwitter size={24} />
+              </a>
+              <a
+                href="https://instagram.com/shabbaz.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-light footer-icon"
+                aria-label="Instagram Profile"
+              >
+                <FaInstagram size={24} />
+              </a>
+              <a
+                href="https://www.snapchat.com/add/shabbaz.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-light footer-icon"
+                aria-label="Snapchat"
+              >
+                <FaSnapchatGhost size={24} />
               </a>
               <a
                 href="mailto:abdulazeemsalau@gmail.com"

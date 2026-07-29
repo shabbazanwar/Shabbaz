@@ -5,6 +5,7 @@ import {
   FaNode, FaDatabase, FaGitAlt, FaEdge, FaTerminal
 } from "react-icons/fa";
 import {
+    SiTypescript,
     SiTailwindcss,
     SiNextdotjs,
     SiPostgresql,
@@ -22,6 +23,7 @@ const Skills = () => {
         { name: "HTML", icon: <FaHtml5 color="#e34c26" /> },
         { name: "CSS", icon: <FaCss3Alt color="#264de4" /> },
         { name: "JavaScript", icon: <FaJs color="#f7df1e" /> },
+        { name: "TypeScript", icon: <SiTypescript color="#3178c6" /> },
         { name: "React", icon: <FaReact color="#61dafb" /> },
         { name: "Bootstrap", icon: <FaBootstrap color="#7952b3" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss color="#38bdf8" /> },

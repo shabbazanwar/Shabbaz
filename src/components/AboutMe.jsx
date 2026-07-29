@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaSnapchatGhost } from 'react-icons/fa';
 
 const AboutMe = ({ scrollToSection, projectsRef, contactRef }) => {
   return (
@@ -31,6 +31,12 @@ const AboutMe = ({ scrollToSection, projectsRef, contactRef }) => {
         </a>
         <a href="https://twitter.com/yourusername" target="_blank" rel="noreferrer">
           <FaTwitter size={28} className="text-dark hover-icon" />
+        </a>
+        <a href="https://instagram.com/shabbaz.dev" target="_blank" rel="noreferrer">
+          <FaInstagram size={28} className="text-dark hover-icon" />
+        </a>
+        <a href="https://www.snapchat.com/add/shabbaz.dev" target="_blank" rel="noreferrer">
+          <FaSnapchatGhost size={28} className="text-dark hover-icon" />
         </a>
       </div>
 
