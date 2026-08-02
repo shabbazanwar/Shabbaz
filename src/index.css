@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
 
 :root {
-  --brand-primary: #4f46e5;
-  --brand-primary-dark: #3730a3;
+  --brand-primary: #03a0fe;
+  --brand-primary-dark: #0280cb;
   --brand-dark: #111827;
   --brand-muted: #6b7280;
   --brand-bg-light: #f8f9fc;
@@ -92,6 +92,10 @@ a {
 
 .site-footer {
   width: 100%;
+}
+
+.brand-watermark {
+  opacity: 0.55;
 }
 
 .project-card {

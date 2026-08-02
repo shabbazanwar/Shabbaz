@@ -26,7 +26,7 @@ function Hero() {
             <Card.Body>
               <div className="d-flex justify-content-between align-items-center">
                 {icon}
-                <h2 className="mb-0">{value}</h2>
+                <p className="mb-0 fw-bold fs-2">{value}</p>
               </div>
               <Card.Title className="mt-2">{title}</Card.Title>
               <Card.Text className="text-muted">{text}</Card.Text>

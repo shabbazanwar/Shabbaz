@@ -19,7 +19,7 @@ const AboutMe = ({ scrollToSection, projectsRef, contactRef }) => {
       <p className="text-muted fs-5">Full-Stack Developer</p>
 
       <p className="text-center mb-4 px-2 px-md-5" style={{ maxWidth: '700px' }}>
-        I'm Abdulazeem Salau, a Full-Stack Developer passionate about creating web applications. I specialize in both front-end and back-end development using technologies like React, Node.js, and MongoDB. I enjoy solving problems, building user-friendly interfaces, and writing clean, scalable code. I'm always eager to learn new technologies and work on projects that make an impact.
+        I'm Abdulazeem Salau, a full-stack developer based in Lagos, Nigeria. I build web applications end to end, from React interfaces down to the databases behind them, and I've shipped e-commerce and business sites for real clients alongside my own projects. My core stack is React, Node.js, and MongoDB, and I've been expanding into Next.js, PostgreSQL, and Prisma on recent builds.
       </p>
 
       <div className="d-flex justify-content-center my-3 gap-3">

@@ -32,7 +32,8 @@ const NavigationBar = ({
   return (
     <Navbar
       expanded={expanded}
-      bg="light"
+      variant="light"
+      bg="white"
       expand="lg"
       fixed="top"
       className={`shadow-sm ${scrolled ? "navbar-scrolled" : ""}`}
@@ -42,10 +43,13 @@ const NavigationBar = ({
         <Navbar.Brand
           role="button"
           onClick={() => handleNavClick(aboutRef)}
-          className="fw-bold"
-          style={{ color: "var(--brand-primary)" }}
+          className="d-flex align-items-center gap-2 p-0"
         >
-          Shabbaz
+          <img src="/logo-mark.png" alt="" width="34" height="34" className="brand-watermark" />
+          <span className="fw-bold">
+            <span style={{ color: "var(--brand-dark)" }}>Shabbaz</span>
+            <span style={{ color: "var(--brand-primary)" }}>.dev</span>
+          </span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="navbar-nav"

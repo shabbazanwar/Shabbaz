@@ -75,7 +75,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <Col xs={12} md={4} className="text-center text-md-end">
-            <h5>Abdulazeem Salau</h5>
+            <h5>Shabbaz.dev</h5>
             <p className="mb-0 text-secondary">
               &copy; {new Date().getFullYear()} All rights reserved.
             </p>

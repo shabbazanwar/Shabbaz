@@ -37,7 +37,7 @@ function ProjectCard({ title, description, image, link }) {
         </div>
         <Card.Text className="text-muted flex-grow-1">{description}</Card.Text>
         <div className="rounded-3 overflow-hidden border mt-2">
-          <Card.Img variant="top" src={image} style={styles.img} />
+          <Card.Img variant="top" src={image} alt={`${title} screenshot`} style={styles.img} />
         </div>
       </Card.Body>
     </Card>

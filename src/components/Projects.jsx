@@ -21,10 +21,10 @@ const Project = () => {
           {/* Each project takes 4 columns on large screens, 6 on medium, 12 on small */}
           <Col lg={4} md={6} xs={12} className="mb-4">
             <ProjectCard
-              title="ShopSpire"
-              description="A multi-vendor e-commerce platform where vendors manage their own stores and customers shop across all of them in one place."
-              image="/projects/shopspire.png"
-              link="https://shopspire.onrender.com/"
+              title="Septagon Solicitors"
+              description="A law firm website for showcasing practice areas, the legal team, and client insights."
+              image="/projects/septagon-solicitors.png"
+              link="https://septagonsolicitors.com"
             />
           </Col>
 
@@ -39,19 +39,19 @@ const Project = () => {
 
           <Col lg={4} md={6} xs={12} className="mb-4">
             <ProjectCard
-              title="Septagon Solicitors"
-              description="A law firm website for showcasing practice areas, the legal team, and client insights."
-              image="/projects/septagon-solicitors.png"
-              link="https://septagon-solicitors.onrender.com/"
+              title="FinSync"
+              description="A personal finance tracker for logging income and expenses and keeping an eye on your budget."
+              image="/projects/finsync.png"
+              link="https://finsync-few1.onrender.com/"
             />
           </Col>
 
           <Col lg={4} md={6} xs={12} className="mb-4">
             <ProjectCard
-              title="FinSync"
-              description="A personal finance tracker for logging income and expenses and keeping an eye on your budget."
-              image="/projects/finsync.png"
-              link="https://finsync-few1.onrender.com/"
+              title="ShopSpire"
+              description="A multi-vendor e-commerce platform where vendors manage their own stores and customers shop across all of them in one place."
+              image="/projects/shopspire.png"
+              link="https://shopspire.onrender.com/"
             />
           </Col>
 
