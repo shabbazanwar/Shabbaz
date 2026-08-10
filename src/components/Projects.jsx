@@ -30,6 +30,15 @@ const Project = () => {
 
           <Col lg={4} md={6} xs={12} className="mb-4">
             <ProjectCard
+              title="STEEZYWURLD"
+              description="A Lagos-based streetwear brand's online store, shipping apparel worldwide."
+              image="/projects/steezywurld.png"
+              link="https://www.steezywurld.xyz/"
+            />
+          </Col>
+
+          <Col lg={4} md={6} xs={12} className="mb-4">
+            <ProjectCard
               title="Yew! Couture"
               description="A Nigerian fashion brand e-commerce site showcasing and selling ready-to-wear apparel."
               image="/projects/yew-couture.png"

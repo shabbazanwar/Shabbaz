@@ -11,6 +11,8 @@ import {
     SiPostgresql,
     SiPrisma,
     SiSupabase,
+    SiCloudinary,
+    SiVercel,
     SiRender,
     SiOpenai
   } from "react-icons/si";
@@ -38,6 +40,7 @@ const Skills = () => {
         { name: "PostgreSQL", icon: <SiPostgresql color="#336791" /> },
         { name: "Prisma", icon: <SiPrisma color="#0c344b" /> },
         { name: "Supabase", icon: <SiSupabase color="#3ecf8e" /> },
+        { name: "Cloudinary", icon: <SiCloudinary color="#3448c5" /> },
         { name: "HTTPie", icon: <FaTerminal color="#6c757d" /> },
       ],
     },
@@ -49,6 +52,7 @@ const Skills = () => {
         { name: "VS Code", icon: <FaCode color="#007acc" /> },
         { name: "Microsoft Edge", icon: <FaEdge color="#0078d7" /> },
         { name: "Render", icon: <SiRender color="#46e3b7" /> },
+        { name: "Vercel", icon: <SiVercel color="#000000" /> },
       ],
     },
   ];
