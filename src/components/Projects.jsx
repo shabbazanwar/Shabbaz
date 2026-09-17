@@ -21,6 +21,15 @@ const Project = () => {
           {/* Each project takes 4 columns on large screens, 6 on medium, 12 on small */}
           <Col lg={4} md={6} xs={12} className="mb-4">
             <ProjectCard
+              title="Fabrication Legend"
+              description="A website for a Kampala-based company offering aluminium and steel fabrication, ceilings, partitions, and interior fit-out across Uganda."
+              image="/projects/fabrication-legend.png"
+              link="https://fabricationlegend.com"
+            />
+          </Col>
+
+          <Col lg={4} md={6} xs={12} className="mb-4">
+            <ProjectCard
               title="Septagon Solicitors"
               description="A law firm website for showcasing practice areas, the legal team, and client insights."
               image="/projects/septagon-solicitors.png"
