@@ -21,15 +21,6 @@ const Project = () => {
           {/* Each project takes 4 columns on large screens, 6 on medium, 12 on small */}
           <Col lg={4} md={6} xs={12} className="mb-4">
             <ProjectCard
-              title="Fabrication Legend"
-              description="A website for a Kampala-based company offering aluminium and steel fabrication, ceilings, partitions, and interior fit-out across Uganda."
-              image="/projects/fabrication-legend.png"
-              link="https://fabricationlegend.com"
-            />
-          </Col>
-
-          <Col lg={4} md={6} xs={12} className="mb-4">
-            <ProjectCard
               title="Septagon Solicitors"
               description="A law firm website for showcasing practice areas, the legal team, and client insights."
               image="/projects/septagon-solicitors.png"
@@ -43,6 +34,15 @@ const Project = () => {
               description="A Lagos-based streetwear brand's online store, shipping apparel worldwide."
               image="/projects/steezywurld.png"
               link="https://www.steezywurld.xyz/"
+            />
+          </Col>
+
+          <Col lg={4} md={6} xs={12} className="mb-4">
+            <ProjectCard
+              title="Fabrication Legend"
+              description="A website for a Kampala-based company offering aluminium and steel fabrication, ceilings, partitions, and interior fit-out across Uganda."
+              image="/projects/fabrication-legend.png"
+              link="https://fabricationlegend.com"
             />
           </Col>
 
@@ -70,6 +70,15 @@ const Project = () => {
               description="A multi-vendor e-commerce platform where vendors manage their own stores and customers shop across all of them in one place."
               image="/projects/shopspire.png"
               link="https://shopspire.onrender.com/"
+            />
+          </Col>
+
+          <Col lg={4} md={6} xs={12} className="mb-4">
+            <ProjectCard
+              title="Bob Review Coach"
+              description="An AI code-review tool that runs a git diff or GitHub pull request past security, correctness, and maintainability reviewers. Built for the IBM Bob 2.0 Hackathon."
+              image="/projects/bob-review-coach.png"
+              link="https://bobreviewcoach-nine.vercel.app/"
             />
           </Col>
 

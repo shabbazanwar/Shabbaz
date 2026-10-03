@@ -5,7 +5,7 @@ import { FaCode, FaAward } from "react-icons/fa";
 const stats = [
   {
     icon: <FaCode size={28} className="text-secondary" />,
-    value: 8,
+    value: 9,
     title: "Total Projects",
     text: "Innovative web solutions crafted",
   },
