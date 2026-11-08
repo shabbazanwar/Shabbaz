@@ -57,51 +57,54 @@ const Contact = () => {
   };
 
   return (
-    <Container className="py-5" id="contact">
-      <h2 className="text-center mb-4 fw-bold">Contact</h2>
-      <Row className="justify-content-center">
-        {/* Left: Contact Information */}
+    <Container className="py-5 contact-form-shell" id="contact" role="region" aria-label="Get in touch">
+      <Row className="justify-content-center align-items-stretch g-4">
         <Col md={5} className="mb-4">
-          <h4>Get in Touch</h4>
-          <div className="mt-3">
-            <p>
-              <FaEnvelope className="me-2 text-dark" /> abdulazeemsalau@gmail.com
-            </p>
-            <p>
-              <FaPhone className="me-2 text-dark" /> +234 904 406 0010
-            </p>
-            <p>
-              <FaMapMarkerAlt className="me-2 text-dark" /> Lagos, Nigeria
-            </p>
-          </div>
+          <div className="contact-intro-panel">
+            <p className="elyebrow">Let’s talk</p>
+            <h4>Get in Touch</h4>
+            <div className="mt-3 contact-meta-list">
+              <p>
+                <FaEnvelope className="me-2 contact-icon" /> <a href="mailto:abdulazeemsalau@gmail.com">abdulazeemsalau@gmail.com</a>
+              </p>
+              <p>
+                <FaPhone className="me-2 contact-icon" /> <a href="tel:+2349044060010">+234 904 406 0010</a>
+              </p>
+              <p>
+                <FaMapMarkerAlt className="me-2 contact-icon" /> Lagos, Nigeria
+              </p>
+            </div>
 
-          {/* Social Links */}
-          <div className="mt-4 d-flex gap-3">
-            <a
-              href="https://linkedin.com/in/abdulazeem-salau-47b86a341"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin size={28} className="text-dark" />
-            </a>
-            <a
-              href="https://github.com/shabbazanwar"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub size={28} className="text-dark" />
-            </a>
+            <div className="mt-4 d-flex gap-3">
+              <a
+                href="https://linkedin.com/in/abdulazeem-salau-47b86a341"
+                aria-label="LinkedIn (opens in new tab)"
+                className="contact-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size={28} />
+              </a>
+              <a
+                href="https://github.com/shabbazanwar"
+                aria-label="GitHub (opens in new tab)"
+                className="contact-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub size={28} />
+              </a>
+            </div>
           </div>
         </Col>
 
-        {/* Right: Contact Form */}
-        <Col md={6}>
-          <Form
-            onSubmit={handleSubmit}
-            className="p-4 shadow-lg rounded-4 bg-light"
-          >
+        <Col md={7}>
+          <Form onSubmit={handleSubmit} className="contact-form-card">
             <Form.Group className="mb-3">
+              <Form.Label htmlFor="contact-name">Your name</Form.Label>
               <Form.Control
+                id="contact-name"
+                autoComplete="name"
                 type="text"
                 placeholder="Enter your name"
                 name="name"
@@ -112,7 +115,10 @@ const Contact = () => {
             </Form.Group>
 
             <Form.Group className="mb-3">
+              <Form.Label htmlFor="contact-email">Email address</Form.Label>
               <Form.Control
+                id="contact-email"
+                autoComplete="email"
                 type="email"
                 placeholder="Enter your email"
                 name="email"
@@ -123,7 +129,9 @@ const Contact = () => {
             </Form.Group>
 
             <Form.Group className="mb-3">
+              <Form.Label htmlFor="contact-subject">Subject</Form.Label>
               <Form.Control
+                id="contact-subject"
                 type="text"
                 placeholder="Enter subject"
                 name="subject"
@@ -134,7 +142,9 @@ const Contact = () => {
             </Form.Group>
 
             <Form.Group className="mb-3">
+              <Form.Label htmlFor="contact-message">Your message</Form.Label>
               <Form.Control
+                id="contact-message"
                 as="textarea"
                 rows={4}
                 placeholder="Enter your message"
@@ -145,34 +155,17 @@ const Contact = () => {
               />
             </Form.Group>
 
-            <Button
-              variant="primary"
-              type="submit"
-              className="w-100"
-              disabled={loading}
-            >
+            <Button variant="primary" type="submit" className="w-100" disabled={loading}>
               {loading ? (
-                <Spinner
-                  as="span"
-                  animation="border"
-                  size="sm"
-                  role="status"
-                  aria-hidden="true"
-                />
+                <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
               ) : (
-                "Send Message"
+                'Send Message'
               )}
-              {loading && " Sending..."}
+              {loading && ' Sending...'}
             </Button>
 
             {success && (
-              <p
-                className={`mt-3 text-center ${
-                  success.includes("successfully")
-                    ? "text-success"
-                    : "text-danger"
-                }`}
-              >
+              <p role="status" className={`mt-3 text-center ${success.includes('successfully') ? 'text-success' : 'text-danger'}`}>
                 {success}
               </p>
             )}

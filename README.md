@@ -54,3 +54,13 @@ npm run build
 ```
 
 Deploy `server/` and the built frontend separately (e.g. Render for the backend, any static host for the frontend), setting `VITE_API_URL` to the deployed backend URL at build time.
+
+## CV
+
+The downloadable CV lives at `public/Abdulazeem-Salau-CV.pdf` and is linked from the navigation and About section. Its editable content and PDF generator are in `scripts/generate-cv.mjs`. After editing the content, regenerate it with:
+
+```
+node scripts/generate-cv.mjs
+```
+
+The CV is based on the existing September 2026 CV, with the Agunwami Enterprise role added for October 2026 onward. No unconfirmed responsibilities are included for that role.
