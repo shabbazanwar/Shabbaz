@@ -1295,20 +1295,31 @@ h3 {
     display: inline-flex;
   }
 
-  .intro-shell,
-  .about-grid,
-  .section-heading,
-  .work-grid,
-  .section-heading {
-    display: grid;
-  }
-
-  .work-grid {
-    display: grid;
+  .intro-shell {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.75fr);
+    gap: 24px;
   }
 
   .about-grid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
     gap: 32px;
+  }
+
+  .section-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.8fr);
+    align-items: start;
+    gap: 20px;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 20px;
+  }
+
+  .stack-row {
+    grid-template-columns: 44px minmax(140px, 0.9fr) minmax(0, 1.7fr) 24px;
+    gap: 14px;
   }
 
   .timeline-item {
@@ -1348,23 +1359,72 @@ h3 {
     padding-top: 30px;
   }
 
+  .intro-shell,
+  .about-grid,
+  .section-heading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .intro h1 {
+    font-size: clamp(3rem, 11vw, 4.5rem);
+  }
+
+  .hero-star {
+    right: 0;
+  }
+
   .intro-meta,
   .intro-footnote {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  .intro-meta {
+    gap: 10px;
+  }
+
   .intro-bottom {
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
   }
 
   .hero-panel {
     order: -1;
   }
 
+  .work-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .section-heading h2,
+  .about-copy h2 {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+  }
+
+  .portrait-wrap img {
+    height: clamp(260px, 80vw, 420px);
+  }
+
   .hero-tags {
     gap: 6px;
+  }
+
+  .work-filters {
+    gap: 6px;
+    border-radius: 20px;
+  }
+
+  .work-filters button {
+    padding: 10px 12px;
+  }
+
+  .project-title {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .certificate-card {
@@ -1376,11 +1436,36 @@ h3 {
   }
 
   .stack-row {
-    grid-template-columns: 38px minmax(0, 1fr) 24px;
+    grid-template-columns: 34px minmax(0, 1fr) 24px;
+    gap: 12px;
   }
 
   .stack-row p {
     grid-column: 2 / -1;
+  }
+
+  .role-entry p {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .timeline-card,
+  .contact-form-card,
+  .legal-content {
+    padding: 20px;
+  }
+
+  .contact-section #contact .row,
+  .contact-form-shell .row {
+    margin-inline: 0;
+  }
+
+  .legal-content {
+    padding-inline: 18px;
+  }
+
+  .portfolio-footer__main {
+    gap: 20px;
   }
 
   .portfolio-footer__main,
@@ -1397,5 +1482,51 @@ h3 {
   .portfolio-footer {
     padding-top: 20px;
     padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header__inner {
+    gap: 12px;
+  }
+
+  .wordmark {
+    gap: 7px;
+    font-size: 1.45rem;
+  }
+
+  .wordmark-mark {
+    width: 30px;
+    height: 30px;
+  }
+
+  .site-controls {
+    gap: 8px;
+  }
+
+  .theme-toggle,
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .page-width {
+    width: min(100% - 24px, 1220px);
+  }
+
+  .work-filters button {
+    padding: 9px 10px;
+    font-size: 0.88rem;
+  }
+
+  .certificate-card {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .certificate-card__icon {
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
   }
 }
