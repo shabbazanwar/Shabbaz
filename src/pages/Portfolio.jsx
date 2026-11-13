@@ -40,6 +40,33 @@ const navItems = [
   ['CV ↓','/Abdulazeem-Salau-CV.pdf'],
 ];
 
+const pageMetadata = {
+  home: {
+    title: 'Shabbaz | Abdulazeem Salau - Full-Stack Developer',
+    description: 'Full-stack developer Abdulazeem Salau builds clear, useful digital experiences, websites, and applications.',
+  },
+  work: {
+    title: 'Work | Shabbaz - Full-Stack Developer',
+    description: 'Selected client projects and independent web applications built by full-stack developer Abdulazeem Salau.',
+  },
+  experience: {
+    title: 'Experience | Shabbaz - Full-Stack Developer',
+    description: 'Professional experience and technical toolkit of full-stack developer Abdulazeem Salau.',
+  },
+  contact: {
+    title: 'Contact | Shabbaz - Full-Stack Developer',
+    description: 'Contact Abdulazeem Salau for web development, product design, and collaboration opportunities.',
+  },
+  privacy: {
+    title: 'Privacy Policy | Shabbaz',
+    description: 'Read the Shabbaz website privacy policy and learn how contact information is handled.',
+  },
+  terms: {
+    title: 'Terms of Service | Shabbaz',
+    description: 'Terms governing the use of the Shabbaz portfolio website.',
+  },
+};
+
 export default function Portfolio({ mode = 'home' }) {
   const [filter, setFilter] = useState('All work');
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,6 +79,23 @@ export default function Portfolio({ mode = 'home' }) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('shabbaz-theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    const metadata = pageMetadata[mode] || pageMetadata.home;
+    const canonicalUrl = `https://www.shabbaz.dev${window.location.pathname}`;
+    const setMetaContent = (selector, content) => {
+      document.head.querySelector(selector)?.setAttribute('content', content);
+    };
+
+    document.title = metadata.title;
+    document.head.querySelector('link[rel="canonical"]')?.setAttribute('href', canonicalUrl);
+    setMetaContent('meta[name="description"]', metadata.description);
+    setMetaContent('meta[property="og:title"]', metadata.title);
+    setMetaContent('meta[property="og:description"]', metadata.description);
+    setMetaContent('meta[property="og:url"]', canonicalUrl);
+    setMetaContent('meta[name="twitter:title"]', metadata.title);
+    setMetaContent('meta[name="twitter:description"]', metadata.description);
+  }, [mode]);
 
   useEffect(() => {
     if (mode === 'work') setFilter('All work');
@@ -68,9 +112,9 @@ export default function Portfolio({ mode = 'home' }) {
 
       <header className="site-header">
         <div className="page-width site-header__inner">
-          <Link className="wordmark" to="/" aria-label="Shabbaz.dev home">
+          <Link className="wordmark" to="/" aria-label="shabbaz.dev home">
             <img className="wordmark-mark" src="/logo-mark.png" alt="" />
-            <span className="wordmark-name">Shabbaz.dev</span>
+            <span className="wordmark-name">shabbaz.dev</span>
           </Link>
 
           <div className="site-controls">
@@ -254,7 +298,7 @@ export default function Portfolio({ mode = 'home' }) {
                     </div>
                     <div className="role-entry">
                       <h3>Freelance Full-Stack Developer</h3>
-                      <p>shabbaz.dev <span>Sep 2025 to Present</span></p>
+                      <p>Shabbaz <span>Sep 2025 to Present</span></p>
                     </div>
                   </div>
 
@@ -416,7 +460,7 @@ export default function Portfolio({ mode = 'home' }) {
                 <div className="timeline-date">Sep 2025 to Present</div>
                 <div className="timeline-card">
                   <h3>Freelance Full-Stack Developer</h3>
-                  <p className="timeline-company">shabbaz.dev</p>
+                  <p className="timeline-company">Shabbaz</p>
                   <p>Designing and shipping client websites and custom digital experiences across e-commerce and business brands.</p>
                 </div>
               </div>
@@ -466,7 +510,7 @@ export default function Portfolio({ mode = 'home' }) {
             <div className="legal-content">
               {mode === 'privacy' ? (
                 <>
-                  <p>Shabbaz.dev respects your privacy. This Privacy Policy explains how we collect, use, and protect information when you visit our website or contact us through the form on this site.</p>
+                  <p>Shabbaz respects your privacy. This Privacy Policy explains how we collect, use, and protect information when you visit our website or contact us through the form on this site.</p>
 
                   <h3>Information we collect</h3>
                   <p>When you use our contact form, we may collect your name, email address, subject, message, and any other information you provide in your inquiry. We may also collect technical information such as browser type, IP address, device information, and pages visited to help maintain and improve the site.</p>
@@ -491,7 +535,7 @@ export default function Portfolio({ mode = 'home' }) {
                 </>
               ) : (
                 <>
-                  <p>These Terms of Service govern your use of Shabbaz.dev and any associated portfolio or project information presented on this website. By accessing or using the site, you agree to these terms.</p>
+                  <p>These Terms of Service govern your use of Shabbaz and any associated portfolio or project information presented on this website. By accessing or using the site, you agree to these terms.</p>
 
                   <h3>Website use</h3>
                   <p>The website is provided for informational and professional purposes. You may view, read, and share content for personal or business use, but you may not misuse the site, attempt to interfere with its operation, or access it in a way that violates applicable law.</p>
@@ -526,9 +570,9 @@ export default function Portfolio({ mode = 'home' }) {
       <footer className="portfolio-footer">
         <div className="page-width">
           <div className="portfolio-footer__main">
-            <Link className="portfolio-footer__brand" to="/" aria-label="Shabbaz.dev home">
+            <Link className="portfolio-footer__brand" to="/" aria-label="shabbaz.dev home">
               <img src="/logo-mark.png" alt="" />
-              <span>Shabbaz.dev</span>
+              <span>shabbaz.dev</span>
             </Link>
 
             <nav className="portfolio-footer__nav" aria-label="Footer navigation">

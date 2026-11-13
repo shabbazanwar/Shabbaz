@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shabbaz.dev/sitemap.xml
+Sitemap: https://www.shabbaz.dev/sitemap.xml
